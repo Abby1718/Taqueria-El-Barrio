@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #F0F9FF;
+  --color-brand-text: #075985;
+  --color-brand-accent: #0284C7;
+  --color-brand-price: #0369A1;
+  --font-display: "Outfit", sans-serif;
+  --font-serif: "Georgia", serif;
+  --font-mono: "Courier New", Courier, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-text font-sans;
+  }
+  
+  h1, h2, h3 {
+    @apply font-black uppercase tracking-tighter;
+  }
+}
+
+.bento-card {
+  @apply bg-white border-2 border-brand-text shadow-[4px_4px_0px_#075985] rounded-xl transition-transform active:translate-x-0.5 active:translate-y-0.5 active:shadow-none;
+}
+
+.category-label {
+  @apply font-serif italic text-sm opacity-70;
+}
+
+.price-tag {
+  @apply font-mono font-bold text-brand-price;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&family=Outfit:wght@800;900&display=swap');
